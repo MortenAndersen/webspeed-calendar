@@ -10,7 +10,6 @@ Author URI: https://www.hjemmesider.dk
  */
 
  // Files
-
  require_once ('files/acf.php');
  require_once ('files/type.php');
  require_once ('files/posttype.php');
