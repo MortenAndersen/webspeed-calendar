@@ -16,7 +16,7 @@ function create_posttype_kalender() {
 			'publicly_queryable' => false,
 			'query_var' => false,
 			'exclude_from_search' => true,
-			'menu_icon' => 'dashicons-businessman',
+			'menu_icon' => 'dashicons-calendar',
 			'supports' => array(
 				'title',
 				'thumbnail',

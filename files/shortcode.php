@@ -31,7 +31,15 @@ function webspeed_kalender_shortcode($atts) {
       echo '<div class="cal-item' . $class . '">';
 
             echo '<div class="cal-title">' . get_the_title() . '</div>';
-            echo '<div class="date-time"><span class="date">&#x1F5D3; ' . date('m. F Y', $dato_start_timestamp) . '</span><span class="time">&#x23F1; ' . date('H:i', $dato_start_timestamp) . '</span></div>';
+            echo '<div class="date-time">';
+              echo '<span class="date">&#x1F5D3; ' . date_i18n('m. F Y', $dato_start_timestamp) . '</span>';
+              if( !get_field('skjul_tid') ) {
+                echo '<span class="time">&#x23F1; ' . date('H:i', $dato_start_timestamp) . '</span>';
+              }
+            echo '</div>';
+            if( get_field('sted')){
+              echo '<div class="cal-place">&#x1F4CD; ' . get_field('sted') . '</div>';
+            }
             if( get_field('bemaerkning')){
               echo '<div class="cal-txt">' . get_field('bemaerkning') . '</div>';
             }
